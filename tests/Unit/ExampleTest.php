@@ -8,11 +8,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
     public function test_normal_case()
     {
         $example = new Example();
@@ -22,7 +17,8 @@ class ExampleTest extends TestCase
         $this->assertEquals(0, $result);
     }
 
-    public function test_devided_by_three(){
+    public function test_devided_by_three()
+    {
         $example = new Example();
         $result = $example->execute(3);
         $this->assertEquals("Fizz", $result);
@@ -30,7 +26,8 @@ class ExampleTest extends TestCase
         $this->assertEquals("Fizz", $result);
     }
 
-    public function test_devided_by_five(){
+    public function test_devided_by_five()
+    {
         $example = new Example();
         $result = $example->execute(5);
         $this->assertEquals("Buzz", $result);
@@ -38,12 +35,12 @@ class ExampleTest extends TestCase
         $this->assertEquals("Buzz", $result);
     }
 
-    public function test_devided_by_fifteen(){
+    public function test_devided_by_fifteen()
+    {
         $example = new Example();
         $result = $example->execute(15);
         $this->assertEquals("FizzBuzz", $result);
         $result = $example->execute(30);
         $this->assertEquals("FizzBuzz", $result);
     }
-
 }
